@@ -1,13 +1,15 @@
 package com.design_patterns.abstract_factory.dependency_injection.modern.furniture;
 
 import com.design_patterns.abstract_factory.dependency_injection.interfaces.furniture.Chair;
-import org.springframework.stereotype.Component;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-@Component
 public class ModernChair implements Chair {
+    private static final Logger logger = LoggerFactory.getLogger(ModernChair.class);
+
     @Override
     public void printChairPicture() {
-        System.out.println("""
+        logger.info("""
                                                                                                                                       \s
                                                                                                                                       \s
                                                                                                                                       \s
@@ -66,6 +68,6 @@ public class ModernChair implements Chair {
 
     @Override
     public void sitOn() {
-        System.out.println("Sitting on Modern Chair");
+        logger.info("Sitting on Modern Chair");
     }
 }

@@ -1,30 +1,32 @@
 package com.design_patterns.abstract_factory.dependency_injection.victorian;
 
+import com.design_patterns.abstract_factory.dependency_injection.FurnitureType;
 import com.design_patterns.abstract_factory.dependency_injection.interfaces.FurnitureFactory;
 import com.design_patterns.abstract_factory.dependency_injection.interfaces.furniture.Chair;
 import com.design_patterns.abstract_factory.dependency_injection.interfaces.furniture.CoffeeTable;
 import com.design_patterns.abstract_factory.dependency_injection.interfaces.furniture.Sofa;
-import com.design_patterns.abstract_factory.dependency_injection.victorian.furniture.VictorianChair;
-import com.design_patterns.abstract_factory.dependency_injection.victorian.furniture.VictorianCoffeeTable;
-import com.design_patterns.abstract_factory.dependency_injection.victorian.furniture.VictorianSofa;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 // ConcreteFactory
-@Configuration
 @Component
-@ComponentScan("com.design_patterns.abstract_factory.dependency_injection.victorian")
 public class VictorianFurnitureFactory implements FurnitureFactory {
-    @Autowired
-    private Chair chair;
+    private final Chair chair;
 
-    @Autowired
-    private CoffeeTable coffeeTable;
+    private final CoffeeTable coffeeTable;
 
-    @Autowired
-    private Sofa sofa;
+    private final Sofa sofa;
+
+    public VictorianFurnitureFactory(@Qualifier("victorianChair") Chair chair, @Qualifier("victorianCoffeeTable") CoffeeTable coffeeTable, @Qualifier("victorianSofa") Sofa sofa) {
+        this.chair = chair;
+        this.coffeeTable = coffeeTable;
+        this.sofa = sofa;
+    }
+
+    @Override
+    public FurnitureType getFactoryType() {
+        return FurnitureType.VICTORIAN;
+    }
 
     @Override
     public Chair getChair() {

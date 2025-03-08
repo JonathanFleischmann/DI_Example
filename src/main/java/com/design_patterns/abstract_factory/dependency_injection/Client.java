@@ -5,6 +5,7 @@ import com.design_patterns.abstract_factory.dependency_injection.interfaces.furn
 import com.design_patterns.abstract_factory.dependency_injection.interfaces.furniture.CoffeeTable;
 import com.design_patterns.abstract_factory.dependency_injection.interfaces.furniture.Sofa;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -13,8 +14,8 @@ public class Client {
     private final FurnitureFactory furnitureFactory;
 
     @Autowired
-    public Client(FactoryOfFactories factoryOfFactories) {
-        this.furnitureFactory = factoryOfFactories.getFactory("modern");
+    public Client(FactoryOfFactories factoryOfFactories, @Qualifier("furnitureType") FurnitureType furnitureType) {
+        this.furnitureFactory = factoryOfFactories.getFactory(furnitureType);
     }
 
     public void printChairInformation() {
