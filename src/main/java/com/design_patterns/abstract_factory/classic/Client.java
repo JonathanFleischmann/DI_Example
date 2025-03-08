@@ -5,7 +5,7 @@ import com.design_patterns.abstract_factory.classic.interfaces.furniture.*;
 
 public class Client {
 
-    private FurnitureFactory furnitureFactory;
+    private final FurnitureFactory furnitureFactory;
 
     public Client(FurnitureFactory furnitureFactory) {
         this.furnitureFactory = furnitureFactory;
