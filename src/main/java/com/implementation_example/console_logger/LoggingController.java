@@ -1,5 +1,6 @@
 package com.implementation_example.console_logger;
 
+import com.implementation_example.console_logger.logger_services.LoggerService;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
