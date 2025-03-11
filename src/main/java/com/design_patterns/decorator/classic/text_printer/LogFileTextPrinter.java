@@ -1,6 +1,6 @@
-package com.design_patterns.decorator.text_printer;
+package com.design_patterns.decorator.classic.text_printer;
 
-import com.design_patterns.decorator.TextPrinter;
+import com.design_patterns.decorator.classic.TextPrinter;
 
 import java.io.*;
 

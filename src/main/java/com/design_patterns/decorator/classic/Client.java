@@ -1,7 +1,7 @@
-package com.design_patterns.decorator;
+package com.design_patterns.decorator.classic;
 
-import com.design_patterns.decorator.text_printer.LogFileTextPrinter;
-import com.design_patterns.decorator.text_printer.text_printer_decorators.*;
+import com.design_patterns.decorator.classic.text_printer.LogFileTextPrinter;
+import com.design_patterns.decorator.classic.text_printer.text_printer_decorators.*;
 
 public class Client {
     public static void main(String[] args) {

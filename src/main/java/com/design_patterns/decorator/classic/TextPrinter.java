@@ -1,4 +1,4 @@
-package com.design_patterns.decorator;
+package com.design_patterns.decorator.classic;
 
 public abstract class TextPrinter {
     public abstract void print(String text);

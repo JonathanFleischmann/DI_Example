@@ -1,7 +1,7 @@
-package com.design_patterns.decorator.text_printer.text_printer_decorators;
+package com.design_patterns.decorator.classic.text_printer.text_printer_decorators;
 
-import com.design_patterns.decorator.TextPrinter;
-import com.design_patterns.decorator.text_printer.TextPrinterDecorator;
+import com.design_patterns.decorator.classic.TextPrinter;
+import com.design_patterns.decorator.classic.text_printer.TextPrinterDecorator;
 
 public class HappyPersonEmoteDecorator extends TextPrinterDecorator {
 
