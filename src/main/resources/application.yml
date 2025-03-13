@@ -1,0 +1,5 @@
+handlers:
+  composites:
+    box1: [smartphone, tablet]
+    box2: [notebook]
+    order: [box1, box2]
