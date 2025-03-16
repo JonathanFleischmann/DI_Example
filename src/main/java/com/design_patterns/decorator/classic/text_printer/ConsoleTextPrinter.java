@@ -4,7 +4,7 @@ import com.design_patterns.decorator.classic.TextPrinter;
 
 import java.io.*;
 
-public class LogFileTextPrinter extends TextPrinter {
+public class ConsoleTextPrinter extends TextPrinter {
 
     private final ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
     private final PrintStream printStream = new PrintStream(outputStream);

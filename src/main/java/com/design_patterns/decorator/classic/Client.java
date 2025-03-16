@@ -1,25 +1,27 @@
 package com.design_patterns.decorator.classic;
 
-import com.design_patterns.decorator.classic.text_printer.LogFileTextPrinter;
+import com.design_patterns.decorator.classic.text_printer.ConsoleTextPrinter;
 import com.design_patterns.decorator.classic.text_printer.text_printer_decorators.*;
 
 public class Client {
     public static void main(String[] args) {
-        LogFileTextPrinter logFileTextPrinter = new LogFileTextPrinter();
+        System.out.println("Message:\nHello World!");
 
-        logFileTextPrinter.print("Hello, World!\n");
+        TextPrinter numberedTextPrinter = new ConsoleTextPrinter();
+        numberedTextPrinter = new LetterToNumberDecorator(numberedTextPrinter);
 
-        TextPrinter textPrinter = new LogFileTextPrinter();
-        textPrinter = new AngryPersonEmoteDecorator(textPrinter);
-        textPrinter = new OuterPointerEmoteDecorator(textPrinter);
-        textPrinter = new InnerHighFiveEmoteDecorator(textPrinter);
-        textPrinter = new HappyPersonEmoteDecorator(textPrinter);
-        textPrinter = new OuterFistEmoteDecorator(textPrinter);
-        textPrinter = new InnerFistEmoteDecorator(textPrinter);
-        textPrinter = new HappyPersonEmoteDecorator(textPrinter);
+        System.out.println("\nNumbered Message:");
+        numberedTextPrinter.print("Hello World!");
 
-        textPrinter.print("Hello");
+        System.out.println(numberedTextPrinter.read());
 
-        System.out.println(textPrinter.read());
+        TextPrinter binaryTextPrinter = new ConsoleTextPrinter();
+        binaryTextPrinter = new NumberToBinaryDecorator(binaryTextPrinter);
+        binaryTextPrinter = new LetterToNumberDecorator(binaryTextPrinter);
+
+        System.out.println("\nBinary Message:");
+        binaryTextPrinter.print("Hello World!");
+
+        System.out.println(binaryTextPrinter.read());
     }
 }
