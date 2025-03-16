@@ -2,7 +2,7 @@ package com.design_patterns.strategy.classic;
 
 import com.design_patterns.strategy.classic.strategies.*;
 
-public class ExampleApplication {
+public class Client {
     public static void main(String[] args) {
         Context context = new Context();
 

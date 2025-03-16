@@ -6,11 +6,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
-public class ExampleApplication {
+public class Client {
 
     private final Context context;
 
-    public ExampleApplication(Context context) {
+    public Client(Context context) {
         this.context = context;
     }
 
@@ -24,6 +24,6 @@ public class ExampleApplication {
     }
 
     public static void main(String[] args) {
-        SpringApplication.run(ExampleApplication.class, args);
+        SpringApplication.run(Client.class, args);
     }
 }
