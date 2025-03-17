@@ -1,18 +1,16 @@
 package com.implementation_example.console_logger_classic;
 
-import com.implementation_example.console_logger_classic.logger_services.LoggerService;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.stereotype.Service;
+import com.implementation_example.console_logger_classic.logger_services.WhiteConsoleLoggerService;
 
 public class LoggingController {
 
-    private final LoggerService loggerService;
+    private final WhiteConsoleLoggerService whiteConsoleLoggerService;
 
-    public LoggingController(LoggerService loggerService) {
-        this.loggerService = loggerService;
+    public LoggingController() {
+        this.whiteConsoleLoggerService = new WhiteConsoleLoggerService();
     }
 
     public void logMessage(String message) {
-        loggerService.log(message);
+        whiteConsoleLoggerService.log(message);
     }
 }
