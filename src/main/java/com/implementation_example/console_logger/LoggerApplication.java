@@ -1,11 +1,13 @@
 package com.implementation_example.console_logger;
 
-import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
 
-@SpringBootApplication
+@Configuration
+@ComponentScan
 public class LoggerApplication {
 
     public static void main(String[] args) {
@@ -13,7 +15,7 @@ public class LoggerApplication {
     }
 
     @Bean
-    CommandLineRunner runner(LoggingController loggingController) {
+    ApplicationRunner runner(LoggingController loggingController) {
         return args -> loggingController.logMessage("Hallo, das ist ein Log-Eintrag!");
     }
 }
