@@ -4,13 +4,13 @@ import com.implementation_example.console_logger_classic.logger_services.WhiteCo
 
 public class LoggingController {
 
-    private final WhiteConsoleLoggerService whiteConsoleLoggerService;
+    private final WhiteConsoleLoggerService loggerService;
 
     public LoggingController() {
-        this.whiteConsoleLoggerService = new WhiteConsoleLoggerService();
+        this.loggerService = new WhiteConsoleLoggerService();
     }
 
     public void logMessage(String message) {
-        whiteConsoleLoggerService.log(message);
+        loggerService.log(message);
     }
 }

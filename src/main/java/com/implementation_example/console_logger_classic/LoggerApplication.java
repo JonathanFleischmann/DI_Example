@@ -1,7 +1,5 @@
 package com.implementation_example.console_logger_classic;
 
-import com.implementation_example.console_logger_classic.logger_services.ColorfulWordsConsoleLoggerService;
-
 public class LoggerApplication {
 
     public static void main(String[] args) {
