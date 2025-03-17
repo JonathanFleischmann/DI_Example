@@ -13,7 +13,7 @@ public class ControlFreak {
     }
 
     public void sayGoodbye() {
-        ConsoleWriter.combineWrite("gooodbye","mom"); //ohne new, trotzdem Controll Freak
+        ConsoleWriter.combineWrite("gooodbye", "mom"); //ohne new, trotzdem Control Freak
     }
 
 }
