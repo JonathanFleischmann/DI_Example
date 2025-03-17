@@ -1,6 +1,6 @@
-package com.implementation_example.console_logger_classic;
+package com.implementation_example;
 
-import com.implementation_example.console_logger_classic.logger_services.WhiteConsoleLoggerService;
+import com.implementation_example.logger_services.WhiteConsoleLoggerService;
 
 public class LoggingController {
 

@@ -1,4 +1,4 @@
-package com.implementation_example.console_logger_list_alternative.logger_services;
+package com.implementation_example.logger_services;
 
 import java.util.Random;
 

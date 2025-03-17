@@ -1,4 +1,4 @@
-package com.implementation_example.console_logger_classic;
+package com.implementation_example;
 
 public class LoggerApplication {
 
