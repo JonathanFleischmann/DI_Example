@@ -15,12 +15,11 @@ public class Client {
     }
 
     @Bean
-    public ApplicationRunner applicationRunner(OrderFactory orderFactory) {
+    public ApplicationRunner applicationRunner(Article order) {
         return args -> {
-            Article article = orderFactory.order();
-            System.out.println(article.getDescription());
-            System.out.println(article.getPriceCalculation());
-            System.out.println("Price: " + article.getPrice());
+            System.out.println(order.getDescription());
+            System.out.println(order.getPriceCalculation());
+            System.out.println("Price: " + order.getPrice());
         };
     }
 }
