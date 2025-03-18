@@ -1,6 +1,5 @@
 package com.design_patterns.strategy.dependency_injection;
 
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -8,7 +7,6 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 @Component
-@ComponentScan("com.design_patterns.strategy.dependency_injection.strategies")
 public class Context {
 
     private final Map<String, Strategy> strategyMap;

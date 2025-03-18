@@ -1,8 +1,5 @@
-package com.implementation_example.console_logger_list_alternative.logger_services;
+package com.implementation_example.logger_services;
 
-import org.springframework.stereotype.Component;
-
-@Component
 public class ColorfulTextConsoleLoggerService implements LoggerService {
 
     @Override

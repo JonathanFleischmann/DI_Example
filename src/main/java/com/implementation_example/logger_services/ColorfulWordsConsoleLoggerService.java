@@ -1,4 +1,4 @@
-package com.implementation_example.console_logger_classic.logger_services;
+package com.implementation_example.logger_services;
 
 import java.util.ArrayList;
 import java.util.List;

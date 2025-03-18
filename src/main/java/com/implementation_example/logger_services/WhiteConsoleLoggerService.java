@@ -1,4 +1,4 @@
-package com.implementation_example.console_logger_classic.logger_services;
+package com.implementation_example.logger_services;
 
 public class WhiteConsoleLoggerService implements LoggerService {
     @Override
