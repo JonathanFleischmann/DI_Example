@@ -13,7 +13,7 @@ public class BadService {
 
     public void logMessage(){
         // Ich brauche eine andere Klasse um etwas zu tun
-        LoggerService logger = applicationContext.getBean(ColorfulSymbolsConsoleLoggerService.class); //Falls es diese Dependency beim Service Locator nicht gibt Failed der Code erst zur laufzeit
+        LoggerService logger = applicationContext.getBean(LoggerService.class); //Falls es diese Dependency beim Service Locator nicht gibt Failed der Code erst zur laufzeit
         //außerdem Abhängigkeit von Spring als Kontext
         logger.log("Message");
     }
